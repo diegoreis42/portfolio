@@ -38,6 +38,11 @@ ul {
   transition: transform 150ms;
 }
 
+.btn:hover {
+  transform: scale(1.01);
+}
+
+
 .w-100 {
   width: 100%;
 }
@@ -130,9 +135,6 @@ header nav a {
   background-size: 300px;
 }
 
-#home > img {
-  display: none;
-}
 
 
 .home-heading {
@@ -177,6 +179,12 @@ header nav a {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  #home > img {
+    display: none;
+  }
+}
+
 /* Sobre */
 #sobre {
   gap: 1rem;
@@ -185,19 +193,61 @@ header nav a {
   color: var(--clr-white);
 }
 
+.mobile-sobre > img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.sobre-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 #sobre > img {
   border-radius: 4px;
 }
 
+.desktop-sobre {
+  display: none;
+}
+
+.desktop-sobre img {
+  border-radius: 12px;
+
+  max-width: 460px;
+}
 
 .sobre-links {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   
   gap: 1.5rem;
 }
 
+@media screen and (max-width: 320px) {
+  .sobre-links {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .mobile-sobre{
+    display: none;
+  }
+
+  .desktop-sobre {
+    display: flex;
+    gap: 92px;
+  }
+
+  .desktop-sobre h2 {
+    margin: 0;
+  }
+
+ 
+}
 
 
 /* Projetos */
@@ -210,6 +260,7 @@ header nav a {
 .cards-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   gap: 1rem;
 }
@@ -220,6 +271,7 @@ header nav a {
   padding: 1.25rem;
 
   border-radius: 4px;
+  max-width: 250px;
 }
 
 .card > img {
@@ -230,6 +282,18 @@ header nav a {
 .card > h3 {
   font-weight: 18px;
   font-weight: 500;
+}
+
+@media screen and (min-width: 1024px) {
+  #projetos {
+    align-items: center;
+  }
+
+  .cards-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 /* Serviços e conhecimentos*/
@@ -279,6 +343,27 @@ header nav a {
   width: 82px;
 }
 
+@media screen and (min-width: 1024px){
+  #servicos {
+    flex-direction: row;
+  }
+
+  #servicos > div {
+    flex-basis: 50%;
+  }
+
+  .servicos-list{
+    flex-direction: column;
+  }
+
+  .servicos-list > li {
+    justify-content: start;
+    height: 64px;
+    max-width: 320;
+  }
+
+
+}
 /* Contato */
 #contato {
   gap: 3rem;
@@ -330,6 +415,11 @@ header nav a {
 }
 
 
+@media screen and (min-width: 1024px){
+  #contato {
+    align-items: center;
+  }
+}
 /* Footer */
 
 footer {
