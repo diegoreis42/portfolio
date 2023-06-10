@@ -34,10 +34,16 @@ ul {
 
   font-size: 14px;
   color: var(--clr-white);
+
+  transition: transform 150ms;
 }
 
 .w-100 {
   width: 100%;
+}
+
+.bg-dark {
+  background-color: var(--clr-black);
 }
 
 section {
@@ -52,6 +58,13 @@ section > h2 {
   line-height: 150%;
 
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
 }
 /* Header */
 
