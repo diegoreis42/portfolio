@@ -1,2 +1,2 @@
 # Portfolio
-Este eh um site responsivo feito para a capacitaçao da byron
+Este é um site responsivo feito para a capacitaçao da byron
